@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "3a84dcf0-9fa7-42fd-9128-8275e41c0f5f",
+		"name": "technical-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12264977"
+	},
+	"item": [
+		{
+			"name": "Data - Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data"
+					],
+					"query": [
+						{
+							"key": "model",
+							"value": "humanoid",
+							"disabled": true
+						},
+						{
+							"key": "tech",
+							"value": "robot",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"c1\",\n    \"name\": \"n1\",\n    \"model\": \"m1\",\n    \"tech\": [\"AI\"],\n    \"status\": \"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data - Read By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/data/c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data",
+						"c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data - Update By Code",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"c1\",\n    \"name\": \"n1e\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \",\n    \"model\": \"m1e\",\n    \"tech\": [\n        \"AI\",\n        \"VR\"\n    ],\n    \"status\": \"inactive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/data/c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data",
+						"c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data - Delete By Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"c1\",\n    \"name\": \"n1e\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua \",\n    \"model\": \"m1e\",\n    \"tech\": [\n        \"AI\",\n        \"VR\"\n    ],\n    \"status\": \"inactive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/data/c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"data",
+						"c1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
